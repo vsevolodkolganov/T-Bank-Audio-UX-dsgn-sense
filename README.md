@@ -127,7 +127,16 @@ System flow:
 Total interaction time:
 
 ≈ 2 seconds.
+# Demo Interaction
 
+User: "Переведи 500 Маше"
+
+T-Bot:
+🎧 listening tone  
+🎧 processing pulse  
+🎧 success chord
+
+Transaction completed in 2 seconds.
 ---
 
 # Sound as Data
