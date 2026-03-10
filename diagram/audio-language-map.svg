@@ -1,0 +1,45 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg" font-family="Arial">
+
+<rect x="0" y="0" width="900" height="600" fill="#f7f7f7"/>
+
+<text x="450" y="60" text-anchor="middle" font-size="28" font-weight="bold">
+Audio Language Map
+</text>
+
+<text x="450" y="90" text-anchor="middle" font-size="16">
+T-Bank Voice Interface
+</text>
+
+<!-- Listening -->
+<rect x="100" y="150" width="200" height="80" rx="12" fill="#d9ecff"/>
+<text x="200" y="185" text-anchor="middle" font-size="16" font-weight="bold">Listening</text>
+<text x="200" y="205" text-anchor="middle" font-size="13">rising tone</text>
+
+<!-- Processing -->
+<rect x="350" y="150" width="200" height="80" rx="12" fill="#ffe8cc"/>
+<text x="450" y="185" text-anchor="middle" font-size="16" font-weight="bold">Processing</text>
+<text x="450" y="205" text-anchor="middle" font-size="13">low pulse loop</text>
+
+<!-- Confirmation -->
+<rect x="600" y="150" width="200" height="80" rx="12" fill="#e6e6ff"/>
+<text x="700" y="185" text-anchor="middle" font-size="16" font-weight="bold">Confirmation</text>
+<text x="700" y="205" text-anchor="middle" font-size="13">short neutral tone</text>
+
+<!-- Success -->
+<rect x="200" y="350" width="200" height="80" rx="12" fill="#d4f7d4"/>
+<text x="300" y="385" text-anchor="middle" font-size="16" font-weight="bold">Success</text>
+<text x="300" y="405" text-anchor="middle" font-size="13">major chord</text>
+
+<!-- Error -->
+<rect x="500" y="350" width="200" height="80" rx="12" fill="#ffd6d6"/>
+<text x="600" y="385" text-anchor="middle" font-size="16" font-weight="bold">Error</text>
+<text x="600" y="405" text-anchor="middle" font-size="13">descending tone</text>
+
+<!-- Lines -->
+<line x1="300" y1="190" x2="350" y2="190" stroke="#555" stroke-width="2"/>
+<line x1="550" y1="190" x2="600" y2="190" stroke="#555" stroke-width="2"/>
+
+<line x1="450" y1="230" x2="300" y2="350" stroke="#555" stroke-width="2"/>
+<line x1="450" y1="230" x2="600" y2="350" stroke="#555" stroke-width="2"/>
+
+</svg>
