@@ -129,7 +129,7 @@ Total interaction time:
 ≈ 2 seconds.
 # Demo Interaction
 
-User: "Переведи 500 Маше"
+User: "Transfer 500 rubles to Masha"
 
 T-Bot:
 🎧 listening tone  
