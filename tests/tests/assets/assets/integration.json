@@ -1,0 +1,116 @@
+{
+  "project": "T-Bank Audio UX",
+  "version": "1.0",
+  "author": "Vsevolod Kolganov",
+  "description": "Earcon integration map for T-Bot zero-UI banking interface",
+
+  "latency_targets_ms": {
+    "wake_to_listen": 200,
+    "command_processing": 150,
+    "transaction_feedback": 300
+  },
+
+  "earcons": {
+
+    "ear_listen_v1": {
+      "name": "Listen / Inhale",
+      "description": "Short rising tone indicating the system is ready to listen",
+      "duration_ms": 220,
+      "frequency_range": "600-1200Hz",
+      "use_case": "Voice session start",
+      "loopable": false
+    },
+
+    "ear_processing_loop_v1": {
+      "name": "Processing Pulse",
+      "description": "Low-frequency pulse replacing dead silence during AI processing",
+      "duration_ms": 800,
+      "frequency_range": "120-240Hz",
+      "loopable": true,
+      "volume_db": -12,
+      "use_case": "Processing feedback"
+    },
+
+    "ear_success_v1": {
+      "name": "Success Quint",
+      "description": "Major fifth chord representing successful financial action",
+      "duration_ms": 300,
+      "notes": ["C5", "G5"],
+      "loopable": false,
+      "use_case": "Successful transaction"
+    },
+
+    "ear_error_v1": {
+      "name": "Error Tone",
+      "description": "Short descending dissonant tone indicating failure",
+      "duration_ms": 320,
+      "notes": ["D#5", "A4"],
+      "loopable": false,
+      "use_case": "Error feedback"
+    },
+
+    "ear_tx_small_v1": {
+      "name": "Money Transfer Whoosh",
+      "description": "Soft directional whoosh sound representing outgoing transfer",
+      "duration_ms": 160,
+      "stereo_pan": "right",
+      "loopable": false,
+      "use_case": "Outgoing payment"
+    },
+
+    "ear_privacy_low_v1": {
+      "name": "Privacy Low Balance",
+      "description": "Minimal texture indicating low balance in privacy mode",
+      "duration_ms": 500,
+      "texture_density": "low",
+      "loopable": false,
+      "use_case": "Private balance feedback"
+    },
+
+    "ear_privacy_mid_v1": {
+      "name": "Privacy Medium Balance",
+      "description": "Medium density sound texture for balance indication",
+      "duration_ms": 500,
+      "texture_density": "medium",
+      "loopable": false,
+      "use_case": "Private balance feedback"
+    },
+
+    "ear_privacy_high_v1": {
+      "name": "Privacy High Balance",
+      "description": "Dense harmonic texture representing high balance",
+      "duration_ms": 500,
+      "texture_density": "high",
+      "loopable": false,
+      "use_case": "Private balance feedback"
+    }
+
+  },
+
+  "haptic_patterns": {
+
+    "success_short": {
+      "description": "Short confirmation vibration",
+      "duration_ms": 60
+    },
+
+    "error_long": {
+      "description": "Long vibration indicating error",
+      "duration_ms": 200
+    }
+
+  },
+
+  "interaction_rules": {
+
+    "never_silent_processing": true,
+    "max_speech_in_public_seconds": 1.2,
+    "privacy_mode_replace_numbers": true,
+    "preferred_feedback_chain": [
+      "earcon",
+      "voice",
+      "haptic"
+    ]
+
+  }
+}
