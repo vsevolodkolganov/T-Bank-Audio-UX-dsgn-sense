@@ -113,7 +113,7 @@ User walking with grocery bags.
 
 Command:
 
-"Переведи 350 рублей Маше"
+"Transfer 500 rubles to Masha"
 
 System flow:
 
@@ -127,6 +127,7 @@ System flow:
 Total interaction time:
 
 ≈ 2 seconds.
+
 # Demo Interaction
 
 User: "Transfer 500 rubles to Masha"
