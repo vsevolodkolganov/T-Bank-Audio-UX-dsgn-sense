@@ -1,0 +1,48 @@
+<svg width="900" height="520" xmlns="http://www.w3.org/2000/svg">
+
+<style>
+.node { fill:#F4F4F4; stroke:#333; stroke-width:2 }
+.text { font-family:Arial; font-size:14px; text-anchor:middle }
+.arrow { stroke:#333; stroke-width:2; marker-end:url(#arrow) }
+</style>
+
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+<path d="M0,0 L6,3 L0,6 Z" fill="#333"/>
+</marker>
+</defs>
+
+<rect class="node" x="60" y="220" width="110" height="50"/>
+<text class="text" x="115" y="250">IDLE</text>
+
+<rect class="node" x="220" y="220" width="130" height="50"/>
+<text class="text" x="285" y="250">LISTENING</text>
+
+<rect class="node" x="400" y="220" width="140" height="50"/>
+<text class="text" x="470" y="250">PROCESSING</text>
+
+<rect class="node" x="600" y="120" width="150" height="50"/>
+<text class="text" x="675" y="150">CONFIRMING</text>
+
+<rect class="node" x="600" y="320" width="150" height="50"/>
+<text class="text" x="675" y="350">AUTHENTICATING</text>
+
+<rect class="node" x="780" y="220" width="120" height="50"/>
+<text class="text" x="840" y="250">TRANSACTION</text>
+
+<rect class="node" x="600" y="420" width="120" height="50"/>
+<text class="text" x="660" y="450">SUCCESS</text>
+
+<rect class="node" x="420" y="420" width="120" height="50"/>
+<text class="text" x="480" y="450">ERROR</text>
+
+<line class="arrow" x1="170" y1="245" x2="220" y2="245"/>
+<line class="arrow" x1="350" y1="245" x2="400" y2="245"/>
+<line class="arrow" x1="540" y1="245" x2="600" y2="145"/>
+<line class="arrow" x1="540" y1="245" x2="600" y2="345"/>
+<line class="arrow" x1="750" y1="145" x2="780" y2="245"/>
+<line class="arrow" x1="750" y1="345" x2="780" y2="245"/>
+<line class="arrow" x1="840" y1="270" x2="660" y2="420"/>
+<line class="arrow" x1="780" y1="270" x2="480" y2="420"/>
+
+</svg>
