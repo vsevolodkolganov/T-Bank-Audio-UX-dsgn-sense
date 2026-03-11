@@ -1,104 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif">
   <style>
-    .bg { fill: #fafafa }
-    .box { fill: #ffffff; stroke: #2b2b2b; stroke-width:1.5; rx:8; }
-    .title { font-size: 18px; font-weight:700; fill:#111 }
-    .label { font-size:13px; fill:#222 }
-    .small { font-size:11px; fill:#444 }
-    .arrow { stroke:#333; stroke-width:2; marker-end:url(#arrow) }
+    .bg { fill:#0b0b0b }
+    .title { fill:#ffffff; font-size:34px; font-weight:700 }
+    .box { fill:#111111; stroke:#FFDD2D; stroke-width:2; rx:14 }
+    .text { fill:#ffffff; font-size:18px }
+    .sub { fill:#cccccc; font-size:14px }
+    .arrow { stroke:#FFDD2D; stroke-width:3; marker-end:url(#arrow) }
   </style>
 
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#FFDD2D"/>
     </marker>
   </defs>
 
-  <rect class="bg" x="0" y="0" width="1200" height="720"/>
+  <rect class="bg" width="1200" height="500"/>
 
-  <!-- Left column: user devices -->
-  <g transform="translate(40,40)">
-    <rect class="box" x="0" y="0" width="220" height="120"/>
-    <text class="title" x="110" y="30" text-anchor="middle">User Devices</text>
-    <text class="label" x="110" y="60" text-anchor="middle">Headphones / Phone</text>
-    <text class="small" x="110" y="85" text-anchor="middle">Mic, Haptics, Button</text>
-  </g>
+  <text x="60" y="70" class="title">T-Bot System Architecture</text>
 
-  <!-- VAD / Preproc -->
-  <g transform="translate(300,40)">
-    <rect class="box" x="0" y="0" width="200" height="120"/>
-    <text class="title" x="100" y="30" text-anchor="middle">Front-end Audio</text>
-    <text class="label" x="100" y="58" text-anchor="middle">VAD • Noise suppression</text>
-    <text class="small" x="100" y="80" text-anchor="middle">SNR estimation • Env tag</text>
-  </g>
+  <!-- User -->
+  <rect x="60" y="200" width="200" height="100" class="box"/>
+  <text x="95" y="245" class="text">👤 Пользователь</text>
+  <text x="95" y="270" class="sub">голосовая команда</text>
 
-  <!-- ASR / NLU -->
-  <g transform="translate(560,20)">
-    <rect class="box" x="0" y="0" width="240" height="160"/>
-    <text class="title" x="120" y="28" text-anchor="middle">Speech & Language</text>
-    <text class="label" x="120" y="60" text-anchor="middle">ASR → Intent Parser → Slot Fill</text>
-    <text class="small" x="120" y="88" text-anchor="middle">Confidence scores • Partial results</text>
-  </g>
+  <!-- Headphones -->
+  <rect x="320" y="200" width="220" height="100" class="box"/>
+  <text x="360" y="245" class="text">🎧 Наушники</text>
+  <text x="350" y="270" class="sub">микрофон + аудио</text>
 
-  <!-- Dialog Manager -->
-  <g transform="translate(560,220)">
-    <rect class="box" x="0" y="0" width="240" height="120"/>
-    <text class="title" x="120" y="30" text-anchor="middle">Dialog Manager</text>
-    <text class="label" x="120" y="58" text-anchor="middle">State machine • Policy engine</text>
-    <text class="small" x="120" y="82" text-anchor="middle">Mode selection (privacy, micro, conv)</text>
-  </g>
+  <!-- Voice AI -->
+  <rect x="600" y="200" width="220" height="100" class="box"/>
+  <text x="655" y="245" class="text">🤖 Voice AI</text>
+  <text x="630" y="270" class="sub">VAD • NLU • Dialog</text>
 
-  <!-- Security stack -->
-  <g transform="translate(860,20)">
-    <rect class="box" x="0" y="0" width="300" height="160"/>
-    <text class="title" x="150" y="28" text-anchor="middle">Security & Anti-Fraud</text>
-    <text class="label" x="150" y="60" text-anchor="middle">Voice Biometrics • Anti-Spoof</text>
-    <text class="small" x="150" y="84" text-anchor="middle">Transaction limits • Whisper codes</text>
-  </g>
+  <!-- Bank -->
+  <rect x="880" y="200" width="240" height="100" class="box"/>
+  <text x="950" y="245" class="text">🏦 T-Bank API</text>
+  <text x="930" y="270" class="sub">payments • accounts</text>
 
-  <!-- Transaction engine -->
-  <g transform="translate(860,220)">
-    <rect class="box" x="0" y="0" width="300" height="120"/>
-    <text class="title" x="150" y="30" text-anchor="middle">Transaction Engine</text>
-    <text class="label" x="150" y="58" text-anchor="middle">Authorization • Ledger • Audit</text>
-    <text class="small" x="150" y="82" text-anchor="middle">Queueing • Retry • Notifications</text>
-  </g>
+  <!-- Arrows -->
+  <line x1="260" y1="250" x2="320" y2="250" class="arrow"/>
+  <line x1="540" y1="250" x2="600" y2="250" class="arrow"/>
+  <line x1="820" y1="250" x2="880" y2="250" class="arrow"/>
 
-  <!-- Bank backend -->
-  <g transform="translate(560,380)">
-    <rect class="box" x="0" y="0" width="600" height="140"/>
-    <text class="title" x="300" y="28" text-anchor="middle">Bank Backend (Core Systems)</text>
-    <text class="label" x="300" y="60" text-anchor="middle">Accounts • Payments • Limits • Notifications</text>
-    <text class="small" x="300" y="88" text-anchor="middle">Secure channels • Audit logs • CRM</text>
-  </g>
+  <!-- Audio Engine -->
+  <rect x="600" y="360" width="220" height="90" class="box"/>
+  <text x="635" y="405" class="text">🔊 Audio Engine</text>
+  <text x="620" y="430" class="sub">earcons • haptics</text>
 
-  <!-- Audio engine / TTS / Earcon -->
-  <g transform="translate(300,220)">
-    <rect class="box" x="0" y="0" width="240" height="120"/>
-    <text class="title" x="120" y="30" text-anchor="middle">Audio Engine</text>
-    <text class="label" x="120" y="58" text-anchor="middle">Earcon Manager • TTS • Sonification</text>
-    <text class="small" x="120" y="82" text-anchor="middle">HRTF, pan, haptics sync</text>
-  </g>
+  <line x1="710" y1="300" x2="710" y2="360" class="arrow"/>
 
-  <!-- arrows -->
-  <line class="arrow" x1="260" y1="100" x2="300" y2="100"/>
-  <line class="arrow" x1="500" y1="100" x2="560" y2="40"/>
-  <line class="arrow" x1="800" y1="100" x2="860" y2="40"/>
-  <line class="arrow" x1="800" y1="260" x2="860" y2="260"/>
-  <line class="arrow" x1="740" y1="160" x2="740" y2="220"/>
-  <line class="arrow" x1="800" y1="300" x2="860" y2="260"/>
-  <line class="arrow" x1="680" y1="300" x2="680" y2="380"/>
-  <line class="arrow" x1="740" y1="430" x2="740" y2="500"/>
-  <line class="arrow" x1="960" y1="300" x2="960" y2="380"/>
-
-  <!-- Legend -->
-  <g transform="translate(40,520)">
-    <rect x="0" y="0" width="1120" height="160" rx="8" fill="#fff" stroke="#ddd"/>
-    <text class="title" x="20" y="26" text-anchor="start">Pipeline notes</text>
-    <text class="small" x="20" y="52" text-anchor="start">• VAD: fast voice activity detection to close input windows quickly</text>
-    <text class="small" x="20" y="72" text-anchor="start">• ASR: partial results streamed to NLU for sub-second intent recognition</text>
-    <text class="small" x="20" y="92" text-anchor="start">• Dialog Manager: enforces privacy mode and chooses earcon/voice mix</text>
-    <text class="small" x="20" y="112" text-anchor="start">• Security: biometric verification + whisper/tactile fallback for high-risk ops</text>
-  </g>
 </svg>
